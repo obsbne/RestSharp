@@ -59,6 +59,12 @@
     <NoWarn>1591,1573,1658,1584,1574,1572</NoWarn>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\RestSharp.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Build.Framework" />
     <Reference Include="Microsoft.Build.Utilities.v3.5" />
@@ -152,6 +158,9 @@
     <Compile Include="Serializers\XmlSerializer.cs" />
     <Compile Include="Http.Async.cs" />
     <Compile Include="RestClient.Sync.cs" />
+    <None Include="..\RestSharp.snk">
+      <Link>RestSharp.snk</Link>
+    </None>
     <None Include="packages.config" />
     <None Include="T4Helper\T4Helper.tt">
       <LastGenOutput>T4Helper.log</LastGenOutput>
